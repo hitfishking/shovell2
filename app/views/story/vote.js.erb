@@ -1,0 +1,11 @@
+
+//page.replace_html 'vote_score', "Score: #{@story.votes.count}"
+//page[:vote_score].visual_effect :highlight
+
+(function() {
+    $('#vote_score').html("Score: <%= @story.reload.votes_count %>");
+	$('#vote_score').fadeOut('s[-[0low');
+	$('#vote_score').fadeIn('slow');
+	$('#vote_history').html("<%= j(render :partial => 'vote', :collection => @story.latest_votes) %>");
+})();
+

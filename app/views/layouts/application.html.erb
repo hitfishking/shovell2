@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shovell2</title>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div id="content">
+    <div id="login_logout">
+      <% unless @current_user.blank? %>
+        Logged in as:
+	    <%=@current_user.login %>
+	    <em><%=link_to "(Logout)",controller: 'account',action: 'logout'  %></em>
+      <% else %>
+        <em>Not Logged in.</em>
+	    <%= link_to 'Login',controller: 'account',action:'login' %>
+      <% end %>
+    </div>
+
+    <h1>Shovell</h1>
+    <% unless flash[:notice].blank? %>
+        <div id="notification"><%= flash[:notice] %></div>
+    <% end %>
+    <%= yield %>
+  </div>
+
+  <ul id="navigation">
+    <li><%= link_to "Front page stories", controller:'story'  %></li>
+    <li><%= link_to "Upcoming stories", controller: 'story',action: 'bin'  %></li>
+    <li><%= link_to "Submit a new story!", controller:'story',action: 'new'  %></li>
+  </ul>
+
+
+</body>
+</html>
