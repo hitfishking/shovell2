@@ -2,7 +2,8 @@
 source 'http://ruby.taobao.org/'
 
 platforms :rbx do
-	gem 'rubysl'
+	ruby '2.1.0', engine: 'rbx',engine_version: '2.2.1'
+	gem 'rubysl','~> 2.0', platform: :rbx
 	#gem 'rubinius-coverage', github: 'rubinius/rubinius-coverage'
 end
 
