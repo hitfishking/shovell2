@@ -124,7 +124,7 @@ DEPENDENCIES
   jquery-rails
   mysql2
   rails (= 4.0.1)
-  rubysl
+  rubysl (~> 2.0)
   sass-rails (~> 4.0.0)
   sdoc
   thin
