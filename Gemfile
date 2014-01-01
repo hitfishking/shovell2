@@ -1,11 +1,11 @@
 #source 'https://rubygems.org'
 source 'http://ruby.taobao.org/'
 
-platforms :rbx do
-	ruby '2.1.0', engine: 'rbx',engine_version: '2.2.3'
-	gem 'rubysl','~> 2.0', platform: :rbx
-	#gem 'rubinius-coverage', github: 'rubinius/rubinius-coverage'
-end
+#platforms :rbx do
+#	ruby '2.1.0', engine: 'rbx',engine_version: '2.2.3'
+#	gem 'rubysl','~> 2.0', platform: :rbx
+#	#gem 'rubinius-coverage', github: 'rubinius/rubinius-coverage'
+#end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
